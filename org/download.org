@@ -1,0 +1,6 @@
+#+TITLE: Get Clasp
+#+OPTIONS: toc:nil num:nil
+
+
+Currently, it is required to build Clasp from source, which is available from the [[https://github.com/clasp-developers/clasp][Github repository]] - use the main branch.
+You can ask for help on the irc channel #clasp on Libera.chat.
