@@ -1,3 +1,5 @@
+#+TITLE: Clasp Manual
+
 * Introduction
 
   Clasp is an implementation of Common Lisp primarily designed for compatibility with C++-language programs and libraries.
@@ -123,7 +125,7 @@ To exit Clasp, the =ext:quit= function can be used. If provided an integer argum
 
 ** Characters
 
-   Clasp supports Unicode by default. =code-char= and =char-code= work with Unicode codepoints. Unicode character names are also supported, e.g. =(princ #\GREEK_SMALL_LETTER_LAMDA) -> #=. =(defun #(n)(* 2 n)) (# 32) -> 62=is also possible.
+   Clasp supports Unicode by default. =code-char= and =char-code= work with Unicode codepoints. Unicode character names are also supported, e.g. =(princ #\GREEK_SMALL_LETTER_LAMDA) -> λ=. =(defun #(n)(* 2 n)) (# 32) -> 62= is also possible.
 
    Type =character= includes all characters in Unicode. Type =base-char= includes only single byte characters, i.e. Basic Latin and Latin-1 Supplement.
 
@@ -309,16 +311,10 @@ To exit Clasp, the =ext:quit= function can be used. If provided an integer argum
 
    =ext:stat= and =ext:fstat= wrap the corresponding posix-interfaces. Use =ext:file-stream-file-descriptor= to get the file-descriptor for a stream.
 
-   The environment can be accessed with =EXT:SETENV=and =EXT:GETENV=
+   The environment can be accessed with =EXT:SETENV= and =EXT:GETENV=
 
-   Working directories can be accessed with =EXT:GETCWD=and =EXT:CHDIR=.
+   Working directories can be accessed with =EXT:GETCWD= and =EXT:CHDIR=.
 
-* Interfaces outside of POSIX
+** Filesystem extensions
 
-** File System
-
-  =ext:rmdir= to delete a directory, =EXT:RMTREE= allows to remove a whole directory tree
-
-** Other interfaces
-   
-   =ext:quit= to leave clasp.
+   =ext:rmdir= removes a directory. =ext:rmtree= removes a whole directory tree.
